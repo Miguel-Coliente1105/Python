@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo WFQ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos/estilos.css">
+</head>
+
+<body>
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalLongOptions" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <table class="table pb-0 mb-0 text-center">
+                        <thead>
+                            <tr>
+                                <th scope="col">Id</th>
+                                <th scope="col">Peso</th>
+                                <th scope="col">Unidad</th>
+                                <th scope="col">Quitar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="js_contenedor_lista_paquetes"></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <div class="float-rigth">
+                        <!-- data-dismiss="modal" -->
+                        <button id="js_btn_guardar_cambios_lista" type="button" class="btn btn-success d-none">Guardar
+                            cambios</button>
+                        <button id="js_btn_eliminar_lista" type="button" class="btn btn-danger">Vaciar</button>
+                        <button id="js_btn_agregar_paquete_lista" type="button" class="btn btn-primary">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="wrap-content">
+        <div class="environment">
+            <div class="environment-title">
+                Paquetes de salida
+            </div>
+            <div id="js_lanzador_ventana_modal" class="environment-icon" type="button" data-toggle="modal"
+                data-target="#exampleModalLongOptions">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                    class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                </svg>
+            </div>
+            <div class="content-paquets" id="js_contenedor_paquetes_simples"></div>
+        </div>
+        <div class="environment">
+            <div class="environment-title">Clasificación de paquetes</div>
+            <div class="content-paquets" id="js_contenedor_paquetes_clasificados"></div>
+        </div>
+        <div class="environment">
+            <div class="environment-title">Orden de envio</div>
+            <div class="content-paquets" id="js_contenedor_paquetes_ordenados"></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="js/Paquete.js"></script>
+    <script src="js/funciones.js"></script>
+    <script src="js/eventos.js"></script>
+</body>
+
+</html>

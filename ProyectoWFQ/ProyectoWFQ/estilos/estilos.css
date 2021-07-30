@@ -1,0 +1,100 @@
+
+.wrap-content {
+    padding: 0px;
+    margin: 0px;
+    min-height: 100vh;
+    display: flex;
+    overflow: auto;
+    background-color: #f1f0fc;
+}
+
+.wrap-content .environment:first-child{
+    border-right: solid 5px white;
+}
+
+.wrap-content .environment:last-child{
+    border-left: solid 5px white;
+}
+
+.environment {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    width: 100%;
+    min-width: 260px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.environment .environment-title {
+    position: absolute;
+    top: 10px;
+    font-size: 20px;
+    color: #8079b0;
+    font-weight: bold;
+}
+
+.environment .environment-icon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-weight: bold;
+}
+
+.environment .environment-icon:hover {
+    cursor: pointer;
+}
+
+.content-paquets {
+    height: 460px;
+    width: 170px;
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #d7d5e6;
+}
+
+.paquet {
+    height: 40px;
+    display: flex;
+    margin-top: 2px;
+}
+
+.content-paquets .paquet:last-child {
+    margin-top: 0px;
+}
+
+.paquet div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paquet div:first-child {
+    width: 40px;
+    background-color: #8079b0;
+}
+
+.paquet div:last-child {
+    width: calc(100% - 30px);
+}
+
+.bgc-default {
+    background-color: #9f98cc;
+}
+
+.bgc-p1 {
+    background-color: #ec876e;
+}
+
+.bgc-p2 {
+    background-color: #f0b459;
+}
+
+.bgc-p3 {
+    background-color: #f0f06f;
+}
+
+.bgc-p4 {
+    background-color: #98e088;
+}
